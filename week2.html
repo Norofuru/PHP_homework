@@ -56,23 +56,30 @@
     <hr/>
     <h2 align="center"><b>系烤報名表單</b></h2> 
 
-    <form action="week2.php" method="post" align="center">
-        請輸入您的學號：<input type="text" placeholder="英文請大寫" required><br/>
-        請輸入您的姓名：<input type="text" required><br/>
+    <form action="week3.php" method="post" align="center">
+        請輸入您的學號：<input type="text" name="id" placeholder="英文請大寫"><br/>
+        請輸入您的姓名：<input type="text" name="name" required><br/>
         性別：
-        <input type="radio" name="gender">男
-        <input type="radio" name="gender">女<br/>
-        請輸入您的電子郵件：<input type="email" required><br/>
+        <input type="radio" name="gender" value="male" checked>男
+        <input type="radio" name="gender" value="female">女<br/>
+        請輸入您的電子郵件：<input type="email" name="email"><br/>
         請選擇您可行的時間：<br/>
-        一 11~14<input type="checkbox"><br/>
-        二 17~20<input type="checkbox"><br/>
-        三 11~14<input type="checkbox"><br/>
-        四 17~20<input type="checkbox"><br/>
-        五 11~14<input type="checkbox"><br/>
-        六 17~20<input type="checkbox"><br/>
-        日 11~14<input type="checkbox"><br/>
-        日 17~20<input type="checkbox"><br/>
-
+        一 11~14<input type="checkbox" name="monAM"><br/>
+        二 17~20<input type="checkbox" name="tuePM"><br/>
+        三 11~14<input type="checkbox" name="wesAM"><br/>
+        四 17~20<input type="checkbox" name="thuPM"><br/>
+        五 11~14<input type="checkbox" name="friAM"><br/>
+        六 17~20<input type="checkbox" name="satPM"><br/>
+        日 11~14<input type="checkbox" name="sunAM"><br/>
+        日 17~20<input type="checkbox" name="sunPM"><br/>
+        請選擇您的套餐：
+        <select name="meal[]" multiple>
+            <option value="economy">經濟套餐</option>
+            <option value="petite">小資套餐</option>
+            <option value="luxury">豪華套餐</option>
+            <option value="lobster">特選龍蝦</option>
+            <option value="kingCrab">特選帝王蟹</option>
+        </select><br/>
         <br>
         <input type="reset"> 
         <input type="submit"><br/>
